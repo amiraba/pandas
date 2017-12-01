@@ -1,7 +1,7 @@
 # sql project
 
 1. 
-Nous garderons les mêmes identifiants entre la table order_details et orders du fait que la situation est modélisée par une relation un-à-un (une commande est unique et a un seul détail et de même les détails d'une commande n'appartiennet qu'à une et une seule commande)
+Je garde les mêmes identifiants entre la table order_details et orders du fait que la situation est modélisée par une relation un-à-un (une commande est unique et a un seul détail et de même les détails d'une commande n'appartiennet qu'à une et une seule commande)
 
 nb_products, étant le nombre de produits distincts achetés dans la commande est assimilée en tant que le nombre des produits spécifiques de la commande (et donc distincts par leurs code à barre unique par exemple). S'il y a une ambiguité sur ce point dans un contexte à large envergure, on doit le comprendre et le valider avec le client ou le product owner au préalable.
 
