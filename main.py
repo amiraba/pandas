@@ -1,12 +1,12 @@
 import question1
 import question2
 import question3
-import graph
+#import graph
 
 def main():
     question1.question1()
     question2.question2()
     question3.question3()
-    graph
+    #graph
 
 main()
