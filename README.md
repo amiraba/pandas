@@ -1,7 +1,7 @@
 # sql project
 
 1. 
-Je garde les mêmes identifiants entre la table order_details et orders du fait que la situation est modélisée par une relation un-à-un (une commande est unique et a un seul détail et de même les détails d'une commande n'appartiennet qu'à une et une seule commande)
+J'ai gardé les mêmes identifiants entre la table order_details et orders du fait que la situation est modélisée par une relation un-à-un (une commande est unique et a un seul détail et de même les détails d'une commande n'appartiennet qu'à une et une seule commande)
 
 nb_products, étant le nombre de produits distincts achetés dans la commande est assimilée en tant que le nombre des produits spécifiques de la commande (et donc distincts par leurs code à barre unique par exemple). S'il y a une ambiguité sur ce point dans un contexte à large envergure, on doit le comprendre et le valider avec le client ou le product owner au préalable.
 
@@ -59,6 +59,14 @@ question 3:
 # pandas project
 
 Used: Python, Pandas, Matplotlib, Pytest, Docker. 
+
+### Quelques remarques
+
+Dans le cas réel, toute commande n'a lieu d'exister que si elle est effective (c'est à dire qu'il y a au moins un produit acheté dans la table order_lines). Donc, le fait de retrouver des détails de commandes (lignes de order_details) où le nombre de produits acheté (et par conséquent, le prix total et le prix après réduction aussi) sont nul revient au fait que nous utilisons cette base de données échantillonée, et donc réduite.
+
+
+Graph:
+Il est très probable que la notation des dates est anglophone (c'est-à-dire MM-DD-YYYY). Sinon, on n'aura que les ventes du mois de Juillet.
 
 ```
 docker build -t python-auchan . 
